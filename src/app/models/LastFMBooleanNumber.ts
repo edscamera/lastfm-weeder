@@ -1,0 +1,1 @@
+export type LastFMBooleanNumber = 0 | 1;

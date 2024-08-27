@@ -14,15 +14,22 @@
       Using the <a href="https://github.com/danielrw7/lastfm-batch-edit" target="_blank">last.fm batch edit script</a> can come in handy.
     </div>
     <div style="display: flex; flex-direction: column;">
-      <div style="flex-grow: 1;">
-        <p-floatLabel>
-          <input id="username" type="text" pInputText [(ngModel)]="username" />
-          <label for="username">last.fm Username</label>
-        </p-floatLabel>
-      </div>
-      <div style="display: flex; gap: 1em; justify-content: right;">
-        <p-button icon="pi pi-play" label="Weed" (click)="weed()"></p-button>
-      </div>
+      @if (progress === null) {
+        <div style="flex-grow: 1;">
+          <p-floatLabel>
+            <input [disabled]="loading > 0" id="username" type="text" pInputText [(ngModel)]="username" />
+            <label for="username">last.fm Username</label>
+          </p-floatLabel>
+        </div>
+        <div style="display: flex; gap: 1em; justify-content: right;">
+          <p-button [disabled]="loading > 0" icon="pi pi-play" label="Weed" (click)="weed()"></p-button>
+        </div>
+      } @else {
+        <div style="flex-grow: 1; align-items: center; justify-content: center; display: flex; flex-direction: column;">
+          <p-progressBar [value]="progress"></p-progressBar>
+          <p>Fetching scrobbles...</p>
+        </div>
+      } 
     </div>
   </div>
 </div>

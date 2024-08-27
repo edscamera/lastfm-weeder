@@ -8,3 +8,7 @@ body {
 body > * {
     flex-grow: 1;
 }
+
+router-outlet + * {
+    height: 100%;
+}

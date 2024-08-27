@@ -1,4 +1,4 @@
-type LastFMBooleanNumber = 0 | 1;
+import { LastFMBooleanNumber } from "./LastFMBooleanNumber";
 
 export interface LastFMUserGetInfoResponse {
     name: string;
