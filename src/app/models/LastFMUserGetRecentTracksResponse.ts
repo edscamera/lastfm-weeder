@@ -13,7 +13,7 @@ export type LastFMUserGetRecentTracksResponse = Readonly<{
 	};
 }>;
 
-export type LastFMTrack = Readonly<{
+export interface LastFMTrack {
 	artist: {
 		mbid: string;
 		'#text': string;
@@ -37,4 +37,4 @@ export type LastFMTrack = Readonly<{
 	'@attr'?: {
 		nowplaying: "true"
 	};
-}>;
+};
