@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "format": "npx prettier --write *"
+    "format": "npx prettier --write *",
+    "deploy": "npx ng deploy --base-href=/lastfm-weeder/ --repo=https://github.com/edscamera/lastfm-weeder.git"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +30,7 @@
     "@angular/cli": "^18.2.9",
     "@angular/compiler-cli": "^18.2.0",
     "@types/jasmine": "~5.1.0",
+    "angular-cli-ghpages": "^2.0.1",
     "jasmine-core": "~5.2.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
